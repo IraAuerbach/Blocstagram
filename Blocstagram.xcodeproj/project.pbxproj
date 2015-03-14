@@ -13,6 +13,17 @@
 		73AC7D881AB4770300CA60FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73AC7D871AB4770300CA60FA /* Images.xcassets */; };
 		73AC7D8B1AB4770300CA60FA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73AC7D891AB4770300CA60FA /* LaunchScreen.xib */; };
 		73AC7D971AB4770300CA60FA /* BlocstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AC7D961AB4770300CA60FA /* BlocstagramTests.m */; };
+		73AC7DAC1AB4780700CA60FA /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73AC7DA21AB4780700CA60FA /* 1.jpg */; };
+		73AC7DAD1AB4780700CA60FA /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73AC7DA31AB4780700CA60FA /* 2.jpg */; };
+		73AC7DAE1AB4780700CA60FA /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73AC7DA41AB4780700CA60FA /* 3.jpg */; };
+		73AC7DAF1AB4780700CA60FA /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73AC7DA51AB4780700CA60FA /* 4.jpg */; };
+		73AC7DB01AB4780700CA60FA /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73AC7DA61AB4780700CA60FA /* 5.jpg */; };
+		73AC7DB11AB4780700CA60FA /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73AC7DA71AB4780700CA60FA /* 6.jpg */; };
+		73AC7DB21AB4780700CA60FA /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73AC7DA81AB4780700CA60FA /* 7.jpg */; };
+		73AC7DB31AB4780700CA60FA /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73AC7DA91AB4780700CA60FA /* 8.jpg */; };
+		73AC7DB41AB4780700CA60FA /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73AC7DAA1AB4780700CA60FA /* 9.jpg */; };
+		73AC7DB51AB4780700CA60FA /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73AC7DAB1AB4780700CA60FA /* 10.jpg */; };
+		73AC7DB81AB4787A00CA60FA /* ImagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AC7DB71AB4787A00CA60FA /* ImagesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +48,18 @@
 		73AC7D901AB4770300CA60FA /* BlocstagramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlocstagramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73AC7D951AB4770300CA60FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73AC7D961AB4770300CA60FA /* BlocstagramTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlocstagramTests.m; sourceTree = "<group>"; };
+		73AC7DA21AB4780700CA60FA /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		73AC7DA31AB4780700CA60FA /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		73AC7DA41AB4780700CA60FA /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		73AC7DA51AB4780700CA60FA /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		73AC7DA61AB4780700CA60FA /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		73AC7DA71AB4780700CA60FA /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		73AC7DA81AB4780700CA60FA /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		73AC7DA91AB4780700CA60FA /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
+		73AC7DAA1AB4780700CA60FA /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
+		73AC7DAB1AB4780700CA60FA /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
+		73AC7DB61AB4787A00CA60FA /* ImagesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesTableViewController.h; sourceTree = "<group>"; };
+		73AC7DB71AB4787A00CA60FA /* ImagesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +101,12 @@
 		73AC7D7D1AB4770300CA60FA /* Blocstagram */ = {
 			isa = PBXGroup;
 			children = (
+				73AC7DA11AB477B700CA60FA /* Images */,
 				73AC7D821AB4770300CA60FA /* AppDelegate.h */,
 				73AC7D831AB4770300CA60FA /* AppDelegate.m */,
 				73AC7D851AB4770300CA60FA /* Blocstagram-Prefix.pch */,
+				73AC7DB61AB4787A00CA60FA /* ImagesTableViewController.h */,
+				73AC7DB71AB4787A00CA60FA /* ImagesTableViewController.m */,
 				73AC7D871AB4770300CA60FA /* Images.xcassets */,
 				73AC7D891AB4770300CA60FA /* LaunchScreen.xib */,
 				73AC7D7E1AB4770300CA60FA /* Supporting Files */,
@@ -112,6 +138,23 @@
 				73AC7D951AB4770300CA60FA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		73AC7DA11AB477B700CA60FA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				73AC7DA21AB4780700CA60FA /* 1.jpg */,
+				73AC7DA31AB4780700CA60FA /* 2.jpg */,
+				73AC7DA41AB4780700CA60FA /* 3.jpg */,
+				73AC7DA51AB4780700CA60FA /* 4.jpg */,
+				73AC7DA61AB4780700CA60FA /* 5.jpg */,
+				73AC7DA71AB4780700CA60FA /* 6.jpg */,
+				73AC7DA81AB4780700CA60FA /* 7.jpg */,
+				73AC7DA91AB4780700CA60FA /* 8.jpg */,
+				73AC7DAA1AB4780700CA60FA /* 9.jpg */,
+				73AC7DAB1AB4780700CA60FA /* 10.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,7 +237,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73AC7DB51AB4780700CA60FA /* 10.jpg in Resources */,
+				73AC7DB31AB4780700CA60FA /* 8.jpg in Resources */,
+				73AC7DB11AB4780700CA60FA /* 6.jpg in Resources */,
 				73AC7D861AB4770300CA60FA /* Blocstagram-Prefix.pch in Resources */,
+				73AC7DB01AB4780700CA60FA /* 5.jpg in Resources */,
+				73AC7DAF1AB4780700CA60FA /* 4.jpg in Resources */,
+				73AC7DAC1AB4780700CA60FA /* 1.jpg in Resources */,
+				73AC7DAD1AB4780700CA60FA /* 2.jpg in Resources */,
+				73AC7DAE1AB4780700CA60FA /* 3.jpg in Resources */,
+				73AC7DB21AB4780700CA60FA /* 7.jpg in Resources */,
+				73AC7DB41AB4780700CA60FA /* 9.jpg in Resources */,
 				73AC7D8B1AB4770300CA60FA /* LaunchScreen.xib in Resources */,
 				73AC7D881AB4770300CA60FA /* Images.xcassets in Resources */,
 			);
@@ -214,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73AC7DB81AB4787A00CA60FA /* ImagesTableViewController.m in Sources */,
 				73AC7D841AB4770300CA60FA /* AppDelegate.m in Sources */,
 				73AC7D811AB4770300CA60FA /* main.m in Sources */,
 			);
