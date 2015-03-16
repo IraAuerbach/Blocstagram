@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+//for deletion method
+#import "DataSource.h"
+
 @interface ImagesTableViewController : UITableViewController
 
 @end

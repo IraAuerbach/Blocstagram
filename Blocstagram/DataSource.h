@@ -12,5 +12,9 @@
 @interface DataSource : NSObject
 
 +(instancetype) sharedInstance;
+
 @property (nonatomic, strong, readonly) NSArray *mediaItems;
+
+-(void) deleteSelected:(NSUInteger)index;
+
 @end

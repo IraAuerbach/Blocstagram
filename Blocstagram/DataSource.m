@@ -69,6 +69,12 @@
     self.mediaItems = randomMediaItems;
 }
 
+-(void) deleteSelected:(NSUInteger)index {
+    NSMutableArray *mediaItemsWithDeletion = self.mediaItems.mutableCopy;
+    [mediaItemsWithDeletion removeObjectAtIndex:index];
+    self.mediaItems = mediaItemsWithDeletion;
+}
+
 - (User *) randomUser {
     User *user = [[User alloc] init];
     

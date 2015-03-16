@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7325EEAC1AB704E2006970E2 /* MediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325EEAB1AB704E2006970E2 /* MediaTableViewCell.m */; };
 		73AC7D811AB4770300CA60FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AC7D801AB4770300CA60FA /* main.m */; };
 		73AC7D841AB4770300CA60FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AC7D831AB4770300CA60FA /* AppDelegate.m */; };
 		73AC7D861AB4770300CA60FA /* Blocstagram-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 73AC7D851AB4770300CA60FA /* Blocstagram-Prefix.pch */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7325EEAA1AB704E2006970E2 /* MediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MediaTableViewCell.h; path = ../MediaTableViewCell.h; sourceTree = "<group>"; };
+		7325EEAB1AB704E2006970E2 /* MediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MediaTableViewCell.m; path = ../MediaTableViewCell.m; sourceTree = "<group>"; };
 		73AC7D7B1AB4770300CA60FA /* Blocstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73AC7D7F1AB4770300CA60FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73AC7D801AB4770300CA60FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -127,6 +130,8 @@
 				73AC7DC01AB5B57500CA60FA /* Comment.m */,
 				73AC7DC21AB5B66400CA60FA /* DataSource.h */,
 				73AC7DC31AB5B66400CA60FA /* DataSource.m */,
+				7325EEAA1AB704E2006970E2 /* MediaTableViewCell.h */,
+				7325EEAB1AB704E2006970E2 /* MediaTableViewCell.m */,
 				73AC7D871AB4770300CA60FA /* Images.xcassets */,
 				73AC7D891AB4770300CA60FA /* LaunchScreen.xib */,
 				73AC7D7E1AB4770300CA60FA /* Supporting Files */,
@@ -289,6 +294,7 @@
 			files = (
 				73AC7DBB1AB5B42E00CA60FA /* User.m in Sources */,
 				73AC7DC11AB5B57500CA60FA /* Comment.m in Sources */,
+				7325EEAC1AB704E2006970E2 /* MediaTableViewCell.m in Sources */,
 				73AC7DBE1AB5B4C600CA60FA /* Media.m in Sources */,
 				73AC7DB81AB4787A00CA60FA /* ImagesTableViewController.m in Sources */,
 				73AC7DC41AB5B66400CA60FA /* DataSource.m in Sources */,
