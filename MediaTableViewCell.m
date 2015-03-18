@@ -22,6 +22,11 @@
 @property (nonatomic, strong) NSLayoutConstraint *usernameAndCaptionLabelHeightConstraint;
 @property (nonatomic, strong) NSLayoutConstraint *commentLabelHeightConstraint;
 
+//properties for horizontal layout
+@property (nonatomic, strong) NSLayoutConstraint *imageWidthConstraint;
+@property (nonatomic, strong) NSLayoutConstraint *usernameAndCaptionLabelWidthConstraint;
+@property (nonatomic, strong) NSLayoutConstraint *commentLabelWidthConstraint;
+
 @end
 
 static UIFont *lightFont;
@@ -85,7 +90,14 @@ static NSParagraphStyle *paragraphStyle;
                                                                         multiplier:1
                                                                           constant:100];
         
-        [self.contentView addConstraints:@[self.imageHeightConstraint, self.usernameAndCaptionLabelHeightConstraint, self.commentLabelHeightConstraint]];
+        //self.imageWidthConstraint = [NSLayoutConstraint constraintWithItem:_mediaImageView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:.5 constant:0.0];
+        
+        //self.usernameAndCaptionLabelWidthConstraint = [NSLayoutConstraint constraintWithItem:_mediaImageView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:.5 constant:0.0];
+        
+        //self.commentLabelWidthConstraint = [NSLayoutConstraint constraintWithItem:_mediaImageView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:.5 constant:0.0];
+        
+        
+        [self.contentView addConstraints:@[self.imageHeightConstraint, self.usernameAndCaptionLabelHeightConstraint, self.commentLabelHeightConstraint]]; //, self.imageWidthConstraint, self.usernameAndCaptionLabelWidthConstraint, self.commentLabelWidthConstraint]];
 
     }
     return self;
