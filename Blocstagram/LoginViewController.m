@@ -30,7 +30,18 @@ NSString *const LoginViewControllerDidGetAccessTokenNotification = @"LoginViewCo
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
         [self.webView loadRequest:request];
     }
+    
+    //assignment for checkpoint 523
+    self.title = @"Login";
+
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithTitle:@"Home" style:UIBarButtonItemStylePlain target:self action:@selector(Home)];
+    self.navigationItem.leftBarButtonItem = homeButton;
 }
+
+-(IBAction)Home {
+    [self viewDidLoad];
+}
+    //end of assignment for checkpoint 523
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
