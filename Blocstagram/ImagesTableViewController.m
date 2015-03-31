@@ -62,7 +62,7 @@
 }
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    Media *item = [self items][indexPath.row];//[DataSource sharedInstance].mediaItems[indexPath.row];
+    Media *item = [DataSource sharedInstance].mediaItems[indexPath.row]; //[self items][indexPath.row];
     return [MediaTableViewCell heightForMediaItem:item width:CGRectGetWidth(self.view.frame)];
 }
 
