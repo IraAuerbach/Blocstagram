@@ -31,9 +31,6 @@
 		73AC7DBE1AB5B4C600CA60FA /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AC7DBD1AB5B4C600CA60FA /* Media.m */; };
 		73AC7DC11AB5B57500CA60FA /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AC7DC01AB5B57500CA60FA /* Comment.m */; };
 		73AC7DC41AB5B66400CA60FA /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AC7DC31AB5B66400CA60FA /* DataSource.m */; };
-		73F372AA1ACAFED400E68F08 /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F372A71ACAFED400E68F08 /* UICKeyChainStore.m */; };
-		73F372AB1ACAFED400E68F08 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 73F372A81ACAFED400E68F08 /* LICENSE */; };
-		73F372AC1ACAFED400E68F08 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 73F372A91ACAFED400E68F08 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3BE195010BB0EAAE20C3F284 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		69475BCBE517B51707EE7355 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7325EEAA1AB704E2006970E2 /* MediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MediaTableViewCell.h; path = ../MediaTableViewCell.h; sourceTree = "<group>"; };
 		7325EEAB1AB704E2006970E2 /* MediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MediaTableViewCell.m; path = ../MediaTableViewCell.m; sourceTree = "<group>"; };
 		736F14FF1AC45B6800F4BA32 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -84,11 +79,9 @@
 		73AC7DC01AB5B57500CA60FA /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		73AC7DC21AB5B66400CA60FA /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
 		73AC7DC31AB5B66400CA60FA /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
-		73F372A61ACAFED400E68F08 /* UICKeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICKeyChainStore.h; sourceTree = "<group>"; };
-		73F372A71ACAFED400E68F08 /* UICKeyChainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICKeyChainStore.m; sourceTree = "<group>"; };
-		73F372A81ACAFED400E68F08 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		73F372A91ACAFED400E68F08 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A837F6D801FC824CE6BD290D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AF7E9DA61127A145043CEEAD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD53F81DD4E02161D7E0D568 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,12 +111,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		09D6F13305A3E01B7D6DC6CF /* Pods */ = {
+		5AFEE18732D5B81601607FAE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				73F372A31ACAFED400E68F08 /* UICKeyChainStore */,
-				3BE195010BB0EAAE20C3F284 /* Pods.debug.xcconfig */,
-				69475BCBE517B51707EE7355 /* Pods.release.xcconfig */,
+				BD53F81DD4E02161D7E0D568 /* Pods.debug.xcconfig */,
+				A837F6D801FC824CE6BD290D /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -134,8 +126,8 @@
 				73AC7D7D1AB4770300CA60FA /* Blocstagram */,
 				73AC7D931AB4770300CA60FA /* BlocstagramTests */,
 				73AC7D7C1AB4770300CA60FA /* Products */,
-				09D6F13305A3E01B7D6DC6CF /* Pods */,
 				01E647328638A84FE4753427 /* Frameworks */,
+				5AFEE18732D5B81601607FAE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,34 +209,6 @@
 				73AC7DAB1AB4780700CA60FA /* 10.jpg */,
 			);
 			name = Images;
-			sourceTree = "<group>";
-		};
-		73F372A31ACAFED400E68F08 /* UICKeyChainStore */ = {
-			isa = PBXGroup;
-			children = (
-				73F372A41ACAFED400E68F08 /* Lib */,
-				73F372A81ACAFED400E68F08 /* LICENSE */,
-				73F372A91ACAFED400E68F08 /* README.md */,
-			);
-			name = UICKeyChainStore;
-			path = Pods/UICKeyChainStore;
-			sourceTree = "<group>";
-		};
-		73F372A41ACAFED400E68F08 /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				73F372A51ACAFED400E68F08 /* UICKeyChainStore */,
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
-		73F372A51ACAFED400E68F08 /* UICKeyChainStore */ = {
-			isa = PBXGroup;
-			children = (
-				73F372A61ACAFED400E68F08 /* UICKeyChainStore.h */,
-				73F372A71ACAFED400E68F08 /* UICKeyChainStore.m */,
-			);
-			path = UICKeyChainStore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,7 +303,6 @@
 				73AC7DAD1AB4780700CA60FA /* 2.jpg in Resources */,
 				73AC7DAE1AB4780700CA60FA /* 3.jpg in Resources */,
 				73AC7DB21AB4780700CA60FA /* 7.jpg in Resources */,
-				73F372AB1ACAFED400E68F08 /* LICENSE in Resources */,
 				73AC7DB41AB4780700CA60FA /* 9.jpg in Resources */,
 				73AC7D8B1AB4770300CA60FA /* LaunchScreen.xib in Resources */,
 				73AC7D881AB4770300CA60FA /* Images.xcassets in Resources */,
@@ -396,13 +359,11 @@
 				73AC7DBB1AB5B42E00CA60FA /* User.m in Sources */,
 				73AC7DC11AB5B57500CA60FA /* Comment.m in Sources */,
 				7325EEAC1AB704E2006970E2 /* MediaTableViewCell.m in Sources */,
-				73F372AA1ACAFED400E68F08 /* UICKeyChainStore.m in Sources */,
 				73AC7DBE1AB5B4C600CA60FA /* Media.m in Sources */,
 				73AC7DB81AB4787A00CA60FA /* ImagesTableViewController.m in Sources */,
 				736F15011AC45B6800F4BA32 /* LoginViewController.m in Sources */,
 				73AC7DC41AB5B66400CA60FA /* DataSource.m in Sources */,
 				73AC7D841AB4770300CA60FA /* AppDelegate.m in Sources */,
-				73F372AC1ACAFED400E68F08 /* README.md in Sources */,
 				73AC7D811AB4770300CA60FA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,7 +478,7 @@
 		};
 		73AC7D9B1AB4770300CA60FA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3BE195010BB0EAAE20C3F284 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = BD53F81DD4E02161D7E0D568 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Blocstagram/Info.plist;
@@ -528,7 +489,7 @@
 		};
 		73AC7D9C1AB4770300CA60FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 69475BCBE517B51707EE7355 /* Pods.release.xcconfig */;
+			baseConfigurationReference = A837F6D801FC824CE6BD290D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Blocstagram/Info.plist;
