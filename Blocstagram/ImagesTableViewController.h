@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class MediaTableViewCell;
+
 //for deletion method
 #import "DataSource.h"
 
 @interface ImagesTableViewController : UITableViewController
+
+- (void) cell:(MediaTableViewCell *)cell didLongPressImageView:(UIImageView *)imageView;
 
 @end
