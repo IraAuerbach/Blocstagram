@@ -19,6 +19,7 @@
 @property (nonatomic, strong) UILabel *commentLabel;
 @property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer;
 @property (nonatomic, strong) UILongPressGestureRecognizer *longPressGestureRecognizer;
+@property (nonatomic, strong) UITapGestureRecognizer *twoFingerTapGestureRecognizer;
 
 //properties for autolayout
 @property (nonatomic, strong) NSLayoutConstraint *imageHeightConstraint;
@@ -49,8 +50,14 @@ static NSParagraphStyle *paragraphStyle;
         self.mediaImageView = [[UIImageView alloc] init];
         self.mediaImageView.userInteractionEnabled = YES;
         
+        self.twoFingerTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(twoFingerTapFired:)];
+        self.twoFingerTapGestureRecognizer.delegate = self;
+        [self.twoFingerTapGestureRecognizer setNumberOfTouchesRequired:2];
+        [self.mediaImageView addGestureRecognizer:self.twoFingerTapGestureRecognizer];
+        
         self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapFired:)];
         self.tapGestureRecognizer.delegate = self;
+        [self.tapGestureRecognizer requireGestureRecognizerToFail:self.twoFingerTapGestureRecognizer];
         [self.mediaImageView addGestureRecognizer:self.tapGestureRecognizer];
         
         self.longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressFired:)];
@@ -235,13 +242,13 @@ static NSParagraphStyle *paragraphStyle;
     }
 }
 
-#pragma mark - Image View
+#pragma mark - UIGestureRecognizerDelegate
 
 -(void) tapFired:(UITapGestureRecognizer *)sender {
     [self.delegate cell:self didTapImageView:self.mediaImageView];
+    
+    NSLog(@"called single finger tap");
 }
-
-#pragma mark - UIGestureRecognizerDelegate
 
 -(BOOL) gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
     return self.isEditing == NO;
@@ -251,6 +258,12 @@ static NSParagraphStyle *paragraphStyle;
     if (sender.state == UIGestureRecognizerStateBegan) {
         [self.delegate cell:self didLongPressImageView:self.mediaImageView];
     }
+}
+
+-(void) twoFingerTapFired:(UITapGestureRecognizer *)sender {
+    [self.delegate cell:self didTapWithTwoFingers:self.mediaImageView];
+    
+    NSLog(@"Called Two Finger Tap");
 }
 
 @end

@@ -58,24 +58,6 @@
     //checkpoint 526
     [self addButton];
 }
-/*
-    self.navigationItem.title = @"Full Screen";
-    
-    //UINavigationItem *topBar = [[UINavigationItem alloc] initWithTitle:@"Full Screen"];
-    //[bar pushNavigationItem:topBar animated:YES];
-    //[topBar release];
-    
-    //checkpoint 526 assignment
-    UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithTitle:@"Share" style:UIBarButtonItemStylePlain target:self action:@selector(Share)];
-    self.navigationItem.rightBarButtonItem = shareButton;
-    
-    NSLog(@"called");
-}
-
--(IBAction)Share {
-   //pull up the share menu
-}
-*/
 
 -(void) addButton {
     CGFloat viewWidth = self.view.bounds.size.width;
@@ -91,8 +73,6 @@
     [self.scrollView addSubview:button];
     
     [button addTarget:self action:@selector(didPressButton) forControlEvents:UIControlEventTouchUpInside];
-    
-    NSLog(@"called");
 }
 
 -(void) didPressButton {
@@ -103,10 +83,6 @@
         UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
         [self presentViewController:activityVC animated:YES completion:nil];
     }
-    
-    
-    //ImagesTableViewController *instance = [[ImagesTableViewController alloc] init];
-    //[instance didLongPressImageView];
 }
 
 

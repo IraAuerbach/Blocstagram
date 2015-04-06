@@ -204,6 +204,11 @@
     }
 }
 
+-(void) cell:(MediaTableViewCell *)cell didTapWithTwoFingers:(UIImageView *)imageView {
+    //write code to refresh the image checkpoint 527
+    [self viewDidLoad];
+}
+
 #pragma mark - UIViewControllerTransitioningDelegate
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
