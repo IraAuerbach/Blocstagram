@@ -15,7 +15,7 @@
 #import "MediaFullScreenViewController.h"
 #import "MediaFullScreenAnimator.h"
 
-@interface ImagesTableViewController () <MediaTableViewCellDelegate, UIViewControllerTransitioningDelegate>
+@interface ImagesTableViewController () <MediaTableViewCellDelegate, UIViewControllerTransitioningDelegate, UIScrollViewDelegate>
 
 @property (nonatomic, weak) UIImageView *lastTappedImageView;
 
@@ -66,6 +66,14 @@
     
     return cell;
 }
+
+/*- (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    Media *mediaItem = [DataSource sharedInstance].mediaItems[indexPath.row];
+    if (mediaItem.downloadState == MediaDownloadStateNeedsImage) {
+        [[DataSource sharedInstance] downloadImageForMediaItem:mediaItem];
+    }
+}*/
+
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     Media *item = [DataSource sharedInstance].mediaItems[indexPath.row]; //[self items][indexPath.row];
@@ -227,4 +235,41 @@
     return animator;
 }
 
+#pragma mark 'UIScrollViewDelegate'
+
+-(void) scrollViewWillBeginDecelerating:(UIScrollView *)scrollView forRowAtIndexPath:(NSIndexPath *)indexPath{
+   //checkpoint 683
+    Media *mediaItem = [DataSource sharedInstance].mediaItems[indexPath.row];
+    if (mediaItem.downloadState == MediaDownloadStateNeedsImage) {
+        [[DataSource sharedInstance] downloadImageForMediaItem:mediaItem];
+    }
+}
+
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
