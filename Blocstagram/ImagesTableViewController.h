@@ -16,5 +16,6 @@
 @interface ImagesTableViewController : UITableViewController
 
 - (void) cell:(MediaTableViewCell *)cell didLongPressImageView:(UIImageView *)imageView;
+- (void) getNumberLikesForMediaCell:(MediaTableViewCell *)cell;
 
 @end

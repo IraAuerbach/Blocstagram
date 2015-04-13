@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4DAF6B856D81FD1A0EFB948B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7E9DA61127A145043CEEAD /* libPods.a */; };
 		7325EEAC1AB704E2006970E2 /* MediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325EEAB1AB704E2006970E2 /* MediaTableViewCell.m */; };
+		736B28C71AD555B300FC0572 /* CircleSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 736B28C61AD555B300FC0572 /* CircleSpinner.m */; };
+		736B28CA1AD55D3800FC0572 /* LikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 736B28C91AD55D3800FC0572 /* LikeButton.m */; };
+		736B28CD1AD58DAA00FC0572 /* NumberLikesLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 736B28CC1AD58DAA00FC0572 /* NumberLikesLabel.m */; };
 		736F15011AC45B6800F4BA32 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 736F15001AC45B6800F4BA32 /* LoginViewController.m */; };
 		73AC7D811AB4770300CA60FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AC7D801AB4770300CA60FA /* main.m */; };
 		73AC7D841AB4770300CA60FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AC7D831AB4770300CA60FA /* AppDelegate.m */; };
@@ -31,6 +34,7 @@
 		73AC7DBE1AB5B4C600CA60FA /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AC7DBD1AB5B4C600CA60FA /* Media.m */; };
 		73AC7DC11AB5B57500CA60FA /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AC7DC01AB5B57500CA60FA /* Comment.m */; };
 		73AC7DC41AB5B66400CA60FA /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 73AC7DC31AB5B66400CA60FA /* DataSource.m */; };
+		73B4E94C1AD6BC0700F95258 /* ComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B4E94B1AD6BC0700F95258 /* ComposeCommentView.m */; };
 		73F372AF1ACD823000E68F08 /* MediaFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F372AE1ACD823000E68F08 /* MediaFullScreenViewController.m */; };
 		73F372B21ACD9B3900E68F08 /* MediaFullScreenAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F372B11ACD9B3900E68F08 /* MediaFullScreenAnimator.m */; };
 /* End PBXBuildFile section */
@@ -48,6 +52,12 @@
 /* Begin PBXFileReference section */
 		7325EEAA1AB704E2006970E2 /* MediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MediaTableViewCell.h; path = ../MediaTableViewCell.h; sourceTree = "<group>"; };
 		7325EEAB1AB704E2006970E2 /* MediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MediaTableViewCell.m; path = ../MediaTableViewCell.m; sourceTree = "<group>"; };
+		736B28C51AD555B300FC0572 /* CircleSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleSpinner.h; sourceTree = "<group>"; };
+		736B28C61AD555B300FC0572 /* CircleSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleSpinner.m; sourceTree = "<group>"; };
+		736B28C81AD55D3800FC0572 /* LikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikeButton.h; sourceTree = "<group>"; };
+		736B28C91AD55D3800FC0572 /* LikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikeButton.m; sourceTree = "<group>"; };
+		736B28CB1AD58DAA00FC0572 /* NumberLikesLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberLikesLabel.h; sourceTree = "<group>"; };
+		736B28CC1AD58DAA00FC0572 /* NumberLikesLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberLikesLabel.m; sourceTree = "<group>"; };
 		736F14FF1AC45B6800F4BA32 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		736F15001AC45B6800F4BA32 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		73AC7D7B1AB4770300CA60FA /* Blocstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +91,8 @@
 		73AC7DC01AB5B57500CA60FA /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		73AC7DC21AB5B66400CA60FA /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
 		73AC7DC31AB5B66400CA60FA /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
+		73B4E94A1AD6BC0700F95258 /* ComposeCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeCommentView.h; sourceTree = "<group>"; };
+		73B4E94B1AD6BC0700F95258 /* ComposeCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeCommentView.m; sourceTree = "<group>"; };
 		73F372AD1ACD823000E68F08 /* MediaFullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaFullScreenViewController.h; sourceTree = "<group>"; };
 		73F372AE1ACD823000E68F08 /* MediaFullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaFullScreenViewController.m; sourceTree = "<group>"; };
 		73F372B01ACD9B3900E68F08 /* MediaFullScreenAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaFullScreenAnimator.h; sourceTree = "<group>"; };
@@ -150,9 +162,9 @@
 			isa = PBXGroup;
 			children = (
 				73AC7DA11AB477B700CA60FA /* Images */,
+				73AC7D851AB4770300CA60FA /* Blocstagram-Prefix.pch */,
 				73AC7D821AB4770300CA60FA /* AppDelegate.h */,
 				73AC7D831AB4770300CA60FA /* AppDelegate.m */,
-				73AC7D851AB4770300CA60FA /* Blocstagram-Prefix.pch */,
 				73AC7DB61AB4787A00CA60FA /* ImagesTableViewController.h */,
 				73AC7DB71AB4787A00CA60FA /* ImagesTableViewController.m */,
 				73AC7DB91AB5B42E00CA60FA /* User.h */,
@@ -171,6 +183,14 @@
 				73F372AE1ACD823000E68F08 /* MediaFullScreenViewController.m */,
 				73F372B01ACD9B3900E68F08 /* MediaFullScreenAnimator.h */,
 				73F372B11ACD9B3900E68F08 /* MediaFullScreenAnimator.m */,
+				736B28C51AD555B300FC0572 /* CircleSpinner.h */,
+				736B28C61AD555B300FC0572 /* CircleSpinner.m */,
+				736B28C81AD55D3800FC0572 /* LikeButton.h */,
+				736B28C91AD55D3800FC0572 /* LikeButton.m */,
+				736B28CB1AD58DAA00FC0572 /* NumberLikesLabel.h */,
+				736B28CC1AD58DAA00FC0572 /* NumberLikesLabel.m */,
+				73B4E94A1AD6BC0700F95258 /* ComposeCommentView.h */,
+				73B4E94B1AD6BC0700F95258 /* ComposeCommentView.m */,
 				73AC7D871AB4770300CA60FA /* Images.xcassets */,
 				73AC7D891AB4770300CA60FA /* LaunchScreen.xib */,
 				73AC7D7E1AB4770300CA60FA /* Supporting Files */,
@@ -369,14 +389,18 @@
 				73F372AF1ACD823000E68F08 /* MediaFullScreenViewController.m in Sources */,
 				73AC7DBB1AB5B42E00CA60FA /* User.m in Sources */,
 				73AC7DC11AB5B57500CA60FA /* Comment.m in Sources */,
+				73B4E94C1AD6BC0700F95258 /* ComposeCommentView.m in Sources */,
 				7325EEAC1AB704E2006970E2 /* MediaTableViewCell.m in Sources */,
 				73F372B21ACD9B3900E68F08 /* MediaFullScreenAnimator.m in Sources */,
 				73AC7DBE1AB5B4C600CA60FA /* Media.m in Sources */,
 				73AC7DB81AB4787A00CA60FA /* ImagesTableViewController.m in Sources */,
 				736F15011AC45B6800F4BA32 /* LoginViewController.m in Sources */,
+				736B28CD1AD58DAA00FC0572 /* NumberLikesLabel.m in Sources */,
 				73AC7DC41AB5B66400CA60FA /* DataSource.m in Sources */,
 				73AC7D841AB4770300CA60FA /* AppDelegate.m in Sources */,
+				736B28CA1AD55D3800FC0572 /* LikeButton.m in Sources */,
 				73AC7D811AB4770300CA60FA /* main.m in Sources */,
+				736B28C71AD555B300FC0572 /* CircleSpinner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,13 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@class Media, MediaTableViewCell;
+@class Media, MediaTableViewCell, ComposeCommentView;
 
 @protocol MediaTableViewCellDelegate <NSObject>
 
 - (void) cell:(MediaTableViewCell *)cell didTapImageView:(UIImageView *)imageView;
 - (void) cell:(MediaTableViewCell *)cell didLongPressImageView:(UIImageView *)imageView;
 - (void) cell:(MediaTableViewCell *)cell didTapWithTwoFingers:(UIImageView *)imageView;
+- (void) cellDidPressLikeButton:(MediaTableViewCell *)cell;
+- (void) getNumberLikesForMediaCell:(MediaTableViewCell *)cell;
+- (void) cellWillStartComposingComment:(MediaTableViewCell *)cell;
+- (void) cell:(MediaTableViewCell *)cell didComposeComment:(NSString *)comment;
 
 @end
 
@@ -23,6 +27,8 @@
 
 @property (nonatomic, strong) Media *mediaItem;
 @property (nonatomic, weak) id <MediaTableViewCellDelegate> delegate;
+@property (nonatomic, strong) UILabel *numberLikesLabel;
+@property (nonatomic, strong, readonly) ComposeCommentView *commentView;
 //@property (nonatomic, strong) UIImageView *mediaImageView;
 //@property (nonatomic, strong) UILabel *usernameAndCaptionLabel;
 //@property (nonatomic, strong) UILabel *commentLabel;
@@ -34,5 +40,7 @@
 
 //set a new media item
 -(void)setMediaItem:(Media *)mediaItem;
+
+- (void) stopComposingComment;
 
 @end

@@ -24,6 +24,8 @@
 @property (nonatomic, strong) NSString *accessToken;
 @property (nonatomic, assign) BOOL thereAreNoMoreOlderMessages;
 @property (nonatomic, strong) AFHTTPRequestOperationManager *instagramOperationManager;
+//checkpoint 528
+@property (nonatomic, strong) NSDictionary *usersWhoHaveLikedPostDictionary;
 
 @end
 
@@ -214,11 +216,16 @@
     
     for (NSDictionary *mediaDictionary in mediaArray) {
         Media *mediaItem = [[Media alloc] initWithDictionary:mediaDictionary];
-        
         if (mediaItem) {
-//            [self downloadImageForMediaItem:mediaItem];
+            [tmpMediaItems addObject:mediaItem];
+            [self willChangeValueForKey:@"mediaItems"];
+            self.mediaItems = tmpMediaItems;
+            [self didChangeValueForKey:@"mediaItems"];
+            
+            [self downloadImageForMediaItem:mediaItem];
+            
+            }
         }
-    }
     
     NSMutableArray *mutableArrayWithKVO = [self mutableArrayValueForKey:@"mediaItems"];
     
@@ -312,6 +319,102 @@
     NSString *documentsDirectory = [paths firstObject];
     NSString *dataPath = [documentsDirectory stringByAppendingPathComponent:filename];
     return dataPath;
+}
+
+#pragma mark - Liking Media Items
+
+- (void) toggleLikeOnMediaItem:(Media *)mediaItem {
+    NSString *urlString = [NSString stringWithFormat:@"media/%@/likes", mediaItem.idNumber];
+    NSDictionary *parameters = @{@"access_token": self.accessToken};
+    
+    if (mediaItem.likeState == LikeStateNotLiked) {
+        
+        mediaItem.likeState = LikeStateLiking;
+        
+        [self.instagramOperationManager POST:urlString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            mediaItem.likeState = LikeStateLiked;
+            [self reloadMediaItem:mediaItem];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            mediaItem.likeState = LikeStateNotLiked;
+            [self reloadMediaItem:mediaItem];
+        }];
+        
+    } else if (mediaItem.likeState == LikeStateLiked) {
+        
+        mediaItem.likeState = LikeStateUnliking;
+        
+        [self.instagramOperationManager DELETE:urlString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            mediaItem.likeState = LikeStateNotLiked;
+            [self reloadMediaItem:mediaItem];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            mediaItem.likeState = LikeStateLiked;
+            [self reloadMediaItem:mediaItem];
+        }];
+        
+    }
+    
+    [self reloadMediaItem:mediaItem];
+    
+    [self getNumberLikes:mediaItem];
+}
+
+- (void) reloadMediaItem:(Media *)mediaItem {
+    NSMutableArray *mutableArrayWithKVO = [self mutableArrayValueForKey:@"mediaItems"];
+    NSUInteger index = [mutableArrayWithKVO indexOfObject:mediaItem];
+    [mutableArrayWithKVO replaceObjectAtIndex:index withObject:mediaItem];
+}
+
+-(void) getNumberLikes:(Media *)mediaItem {
+    NSString *urlString = [NSString stringWithFormat:@"media/%@/likes", mediaItem.idNumber];
+    NSDictionary *parameters = @{@"access_token": self.accessToken};
+    
+    [self.instagramOperationManager GET:urlString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"Got the dictionary");
+        self.usersWhoHaveLikedPostDictionary = responseObject;
+        [self reloadMediaItem:mediaItem];
+        NSArray *data = [[NSArray alloc] initWithArray:self.usersWhoHaveLikedPostDictionary[@"data"]];
+        NSLog(@"%lu", (unsigned long)data.count);
+        //NSLog(@"%lu users have liked the post", (unsigned long)self.usersWhoHaveLikedPostDictionary.count);
+        //for (NSString *key in [self.usersWhoHaveLikedPostDictionary allKeys]) {
+          //  NSLog(@"%@", key);
+            //NSLog(@"%@", [self.usersWhoHaveLikedPostDictionary objectForKey:key]);
+        //}
+        NSLog(@"%@", data);
+        mediaItem.numberLikesLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)data.count];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error getting dictionary of likes");
+        [self reloadMediaItem:mediaItem];
+    }];
+}
+
+#pragma mark - Comments
+
+- (void) commentOnMediaItem:(Media *)mediaItem withCommentText:(NSString *)commentText {
+    if (!commentText || commentText.length == 0) {
+        return;
+    }
+    
+    NSString *urlString = [NSString stringWithFormat:@"media/%@/comments", mediaItem.idNumber];
+    NSDictionary *parameters = @{@"access_token": self.accessToken, @"text": commentText};
+    
+    [self.instagramOperationManager POST:urlString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        mediaItem.temporaryComment = nil;
+        
+        NSString *refreshMediaUrlString = [NSString stringWithFormat:@"media/%@", mediaItem.idNumber];
+        NSDictionary *parameters = @{@"access_token": self.accessToken};
+        [self.instagramOperationManager GET:refreshMediaUrlString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            Media *newMediaItem = [[Media alloc] initWithDictionary:responseObject];
+            NSMutableArray *mutableArrayWithKVO = [self mutableArrayValueForKey:@"mediaItems"];
+            NSUInteger index = [mutableArrayWithKVO indexOfObject:mediaItem];
+            [mutableArrayWithKVO replaceObjectAtIndex:index withObject:newMediaItem];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            [self reloadMediaItem:mediaItem];
+        }];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        NSLog(@"Response: %@", operation.responseString);
+        [self reloadMediaItem:mediaItem];
+    }];
 }
 
 @end
